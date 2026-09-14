@@ -1,9 +1,10 @@
 import os
+import certifi
 from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo import IndexModel, DESCENDING
 
 MONGO_URL = os.environ.get("MONGO_URL", "mongodb://localhost:27017")
-client = AsyncIOMotorClient(MONGO_URL)
+client = AsyncIOMotorClient(MONGO_URL, tlsCAFile=certifi.where())
 db = client.get_database(os.environ.get("DB_NAME", "taskflow"))
 
 INDEXES: dict[str, list[IndexModel]] = {
