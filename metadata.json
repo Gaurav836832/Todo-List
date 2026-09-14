@@ -1,0 +1,7 @@
+{
+  "name": "TaskFlow",
+  "description": "A smooth, friendly todo list for keeping your day clear and focused.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
